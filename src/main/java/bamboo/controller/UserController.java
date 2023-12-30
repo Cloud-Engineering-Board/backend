@@ -65,7 +65,7 @@ public class UserController {
     public ResponseEntity<Void> updateUserInfo(@RequestPart(value = "user") UserDTO userDTO,
                                                @RequestPart(required = false, value = "profileImg") MultipartFile multipartFile,
                                                @AuthenticationPrincipal User user){
-        log.info("[updateUserInfo] 실행.");
+        log.info("[updateUserInfo] 실행");
         try {
             userService.updateUser(userDTO, multipartFile, user);
             return ResponseEntity.status(HttpStatus.OK).build();
