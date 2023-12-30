@@ -42,7 +42,7 @@ public class UserService {
         log.info("[getGoogleAccessToken] 실행");
         String googleAccessToken = oauthService.getGoogleAccessToken(accessCode, redirectUri);
 
-        log.info("[getGoogleUserInfo] 실행");
+        log.info("[getGoogleUserInfo] 실행.");
         UserCheckDTO userCheckDTO = oauthService.getGoogleUserInfo(googleAccessToken);
 
         log.info("[loginResult] 실행");

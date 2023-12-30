@@ -3,6 +3,7 @@ package bamboo.config.security;
 import bamboo.config.jwt.TokenFilter;
 import bamboo.config.jwt.TokenProvider;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
@@ -15,6 +16,7 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @RequiredArgsConstructor
 @Configuration
+@Slf4j
 public class OAuthSecurityConfig {
     private final TokenProvider tokenProvider;
 
